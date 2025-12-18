@@ -54,39 +54,39 @@ export default function HomeBold() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8">
+            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6 sm:mb-8">
               <Sparkles className="w-4 h-4 text-white" />
               <span className="text-white/90 text-sm font-medium">Palm Harbor&apos;s Window Experts</span>
             </div>
 
             {/* Rotating Word */}
-            <div className="mb-6">
-              <span className="text-6xl sm:text-8xl lg:text-9xl font-extrabold text-white/20 block leading-none">
+            <div className="mb-4 sm:mb-6 overflow-hidden">
+              <span className="text-3xl sm:text-6xl lg:text-8xl font-extrabold text-white/20 block leading-none tracking-tight">
                 {words[wordIndex]}
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-none tracking-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6 leading-tight tracking-tight">
               WINDOWS<br />
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: `linear-gradient(to right, white, var(--accent))` }}>
+              <span className="bg-clip-text text-transparent text-xl sm:text-5xl lg:text-6xl block tracking-tighter sm:tracking-tight" style={{ backgroundImage: `linear-gradient(to right, white, var(--accent))` }}>
                 TRANSFORMED
               </span>
             </h1>
 
-            <p className="text-xl sm:text-2xl text-white/70 mb-10 max-w-2xl mx-auto font-light">
+            <p className="text-lg sm:text-xl text-white/70 mb-8 sm:mb-10 max-w-xl mx-auto font-light px-2">
               Professional window cleaning that makes your home shine. 
               Bold results. Honest prices.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2">
               <a
                 href={PHONE_HREF}
-                className="group inline-flex items-center justify-center gap-3 px-8 py-5 text-lg font-bold rounded-2xl transition-all hover:scale-105"
+                className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-2xl transition-all hover:scale-105"
                 style={{ backgroundColor: 'var(--accent)', color: 'white' }}
               >
                 <Phone className="w-5 h-5" />
@@ -95,7 +95,7 @@ export default function HomeBold() {
               </a>
               <Link
                 href="/services"
-                className="glass inline-flex items-center justify-center px-8 py-5 text-lg font-bold text-white rounded-2xl transition-all hover:bg-white/20"
+                className="glass inline-flex items-center justify-center px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg font-bold text-white rounded-2xl transition-all hover:bg-white/20"
               >
                 SEE SERVICES
               </Link>
