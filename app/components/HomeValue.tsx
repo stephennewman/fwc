@@ -306,18 +306,21 @@ export default function HomeValue() {
                 {index < processSteps.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-200" />
                 )}
-                <div className="relative text-center">
-                  <div 
-                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10"
-                    style={{ backgroundColor: 'var(--primary)' }}
-                  >
-                    <step.icon className="w-7 h-7 text-white" />
-                  </div>
-                  <div 
-                    className="absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white z-20"
-                    style={{ backgroundColor: 'var(--accent)' }}
-                  >
-                    {step.step}
+                <div className="text-center">
+                  {/* Icon with number badge wrapper */}
+                  <div className="relative inline-block mb-4">
+                    <div 
+                      className="w-16 h-16 rounded-full flex items-center justify-center relative z-10"
+                      style={{ backgroundColor: 'var(--primary)' }}
+                    >
+                      <step.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div 
+                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white z-20"
+                      style={{ backgroundColor: 'var(--accent)' }}
+                    >
+                      {step.step}
+                    </div>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
