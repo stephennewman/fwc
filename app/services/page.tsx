@@ -60,17 +60,36 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-surface to-white py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="relative overflow-hidden py-20 sm:py-28" style={{ background: 'linear-gradient(to bottom right, var(--primary), var(--primary-dark), var(--primary))' }}>
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-40 h-40 border border-white/30 rounded-full" />
+          <div className="absolute bottom-10 right-10 w-60 h-60 border border-white/20 rounded-full" />
+          <div className="absolute top-1/2 left-1/3 w-32 h-32 border border-white/20 rounded-full" />
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold text-text mb-6">
-              Professional Window Cleaning Services
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <CheckCircle className="w-4 h-4" />
+              Licensed & Insured
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Professional Window{' '}
+              <span style={{ color: 'var(--accent)' }}>Cleaning Services</span>
             </h1>
-            <p className="text-xl text-text-light leading-relaxed">
+            <p className="text-xl text-white/80 leading-relaxed mb-8">
               From cozy homes to busy storefronts, we deliver streak-free, sparkling 
-              windows throughout Palm Harbor and Pinellas County. Licensed, insured, 
-              and committed to quality.
+              windows throughout Palm Harbor and Pinellas County.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <CTAButton isPhone variant="primary">
+                Call for Free Quote
+              </CTAButton>
+              <CTAButton href="#residential" variant="outline" className="border-white text-white hover:bg-white/10">
+                View Services
+              </CTAButton>
+            </div>
           </div>
         </div>
       </section>

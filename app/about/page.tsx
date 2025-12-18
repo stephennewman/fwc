@@ -51,32 +51,43 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-surface to-white py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="relative overflow-hidden py-20 sm:py-28" style={{ background: 'linear-gradient(to bottom right, var(--primary), var(--primary-dark), var(--primary))' }}>
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-40 h-40 border border-white/30 rounded-full" />
+          <div className="absolute bottom-20 left-10 w-60 h-60 border border-white/20 rounded-full" />
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-text mb-6">
-                About Fahey&apos;s Window Cleaning
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Heart className="w-4 h-4" />
+                Locally Owned & Operated
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                About{' '}
+                <span style={{ color: 'var(--accent)' }}>Fahey&apos;s</span>
               </h1>
-              <p className="text-xl text-text-light leading-relaxed mb-6">
+              <p className="text-xl text-white/80 leading-relaxed mb-6">
                 {/* TODO: Replace with actual company story */}
                 We&apos;re a locally owned and operated window cleaning company based right 
                 here in Palm Harbor, Florida. What started as a commitment to helping 
                 our neighbors keep their homes looking great has grown into a trusted 
-                service for both residential and commercial customers across Pinellas County.
+                service across Pinellas County.
               </p>
-              <p className="text-lg text-text-light leading-relaxed">
+              <p className="text-lg text-white/70 leading-relaxed">
                 Our Irish roots remind us of the value of hard work, honesty, and 
                 treating others the way we&apos;d want to be treated. That&apos;s the Fahey way.
               </p>
             </div>
             
             {/* Placeholder for team/owner photo */}
-            <div className="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl aspect-[4/3] flex items-center justify-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl aspect-[4/3] flex items-center justify-center border border-white/20">
               {/* TODO: Replace with actual team photo */}
               <div className="text-center p-8">
-                <Users className="w-20 h-20 text-primary/40 mx-auto mb-4" />
-                <p className="text-text-light">Team photo coming soon</p>
+                <Users className="w-20 h-20 text-white/40 mx-auto mb-4" />
+                <p className="text-white/60">Team photo coming soon</p>
               </div>
             </div>
           </div>

@@ -1,32 +1,30 @@
 import type { Metadata } from "next";
-import { DM_Sans, Poppins, Nunito, Lora, Space_Grotesk } from "next/font/google";
+import { DM_Sans, Inter, Syne, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import StickyMobileCTA from "./components/StickyMobileCTA";
 import { ThemeProvider } from "./components/ThemeContext";
 
+// Layout 1: Original - DM Sans (friendly, approachable)
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+// Layout 2: Clean & Simple - Inter (clean, trustworthy, readable)
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const nunito = Nunito({
-  variable: "--font-nunito",
+// Layout 3: Bold & Dynamic - Syne (bold, modern, distinctive)
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const spaceGrotesk = Space_Grotesk({
@@ -182,11 +180,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className={`${dmSans.className} ${poppins.variable} ${nunito.variable} ${lora.variable} ${spaceGrotesk.variable} antialiased`}>
+      <body className={`${dmSans.variable} ${inter.variable} ${syne.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider>
           <Header />
           <main>{children}</main>
           <Footer />
+          <StickyMobileCTA />
         </ThemeProvider>
       </body>
     </html>

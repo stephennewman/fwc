@@ -62,16 +62,35 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-surface to-white py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="relative overflow-hidden py-20 sm:py-28" style={{ background: 'linear-gradient(to bottom right, var(--primary), var(--primary-dark), var(--primary))' }}>
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-20 w-32 h-32 border border-white/30 rounded-full" />
+          <div className="absolute bottom-10 right-20 w-48 h-48 border border-white/20 rounded-full" />
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold text-text mb-6">
-              Get Your Free Quote
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Clock className="w-4 h-4" />
+              Response within 24 hours
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Get Your{' '}
+              <span style={{ color: 'var(--accent)' }}>Free Quote</span>
             </h1>
-            <p className="text-xl text-text-light leading-relaxed">
+            <p className="text-xl text-white/80 leading-relaxed mb-8">
               Ready for crystal clear windows? Contact us today for a free, no-obligation 
-              estimate. We typically respond within 24 hours during business days.
+              estimate. Call now for the fastest response!
             </p>
+            <a
+              href={PHONE_HREF}
+              className="inline-flex items-center gap-3 bg-white text-lg px-6 py-4 rounded-xl font-semibold transition-transform hover:scale-105"
+              style={{ color: 'var(--primary)' }}
+            >
+              <Phone className="w-6 h-6" />
+              {PHONE_NUMBER}
+            </a>
           </div>
         </div>
       </section>
