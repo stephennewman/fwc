@@ -36,7 +36,8 @@ export default function ThemeSwitcher() {
               key={l.id}
               onClick={() => {
                 setLayout(l.id);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // Instant scroll - more reliable on mobile
+                window.scrollTo(0, 0);
               }}
               className={`group relative flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm transition-all ${
                 layout === l.id
@@ -68,7 +69,8 @@ export default function ThemeSwitcher() {
               key={t.id}
               onClick={() => {
                 setTheme(t.id);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // Instant scroll - more reliable on mobile
+                window.scrollTo(0, 0);
               }}
               className={`group relative flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all ${
                 theme === t.id
