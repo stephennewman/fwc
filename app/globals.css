@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
+/* ==========================================
+   THEME 1: Irish Green & Gold (Default)
+   ========================================== */
 :root {
+  --primary: #1e7b1e;
+  --primary-dark: #166616;
+  --primary-light: #2d9a2d;
+  --secondary: #3a9fd5;
+  --secondary-light: #6dbde8;
+  --accent: #d4a020;
+  --accent-hover: #ba8c1a;
+  --text: #1e293b;
+  --text-light: #64748b;
   --background: #ffffff;
-  --foreground: #171717;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --foreground: var(--text);
 }
 
+/* ==========================================
+   THEME 2: Ocean Blue & Coral
+   ========================================== */
+html[data-theme="ocean-blue"] {
+  --primary: #0c4a6e;
+  --primary-dark: #082f49;
+  --primary-light: #0369a1;
+  --secondary: #0ea5e9;
+  --secondary-light: #7dd3fc;
+  --accent: #f97316;
+  --accent-hover: #ea580c;
+  --text: #0f172a;
+  --text-light: #64748b;
+  --background: #ffffff;
+  --surface: #f0f9ff;
+  --border: #e0f2fe;
+}
+
+/* ==========================================
+   THEME 3: Coastal Teal & Coral Pink
+   ========================================== */
+html[data-theme="coastal-coral"] {
+  --primary: #0d9488;
+  --primary-dark: #0f766e;
+  --primary-light: #14b8a6;
+  --secondary: #06b6d4;
+  --secondary-light: #67e8f9;
+  --accent: #f472b6;
+  --accent-hover: #ec4899;
+  --text: #134e4a;
+  --text-light: #5eead4;
+  --background: #ffffff;
+  --surface: #f0fdfa;
+  --border: #ccfbf1;
+}
+
+/* ==========================================
+   THEME 4: Slate Modern & Electric Blue
+   ========================================== */
+html[data-theme="slate-modern"] {
+  --primary: #334155;
+  --primary-dark: #1e293b;
+  --primary-light: #475569;
+  --secondary: #94a3b8;
+  --secondary-light: #cbd5e1;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --text: #0f172a;
+  --text-light: #64748b;
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+}
+
+/* ==========================================
+   THEME 5: Sunset Warm (Burgundy & Orange)
+   ========================================== */
+html[data-theme="sunset-warm"] {
+  --primary: #7f1d1d;
+  --primary-dark: #5c1414;
+  --primary-light: #991b1b;
+  --secondary: #f59e0b;
+  --secondary-light: #fcd34d;
+  --accent: #ea580c;
+  --accent-hover: #c2410c;
+  --text: #292524;
+  --text-light: #78716c;
+  --background: #ffffff;
+  --surface: #fef7f3;
+  --border: #fde8e0;
+}
+
+/* ==========================================
+   THEME 6: Chicago Bears (Navy & Orange)
+   ========================================== */
+html[data-theme="chicago-bears"] {
+  --primary: #0B162A;
+  --primary-dark: #060d18;
+  --primary-light: #1a2d4a;
+  --secondary: #C83803;
+  --secondary-light: #e85a2a;
+  --accent: #C83803;
+  --accent-hover: #a52e02;
+  --text: #0B162A;
+  --text-light: #4a5568;
+  --background: #ffffff;
+  --surface: #f7f8fa;
+  --border: #e2e4e8;
+}
+
+/* ==========================================
+   Tailwind Theme Configuration
+   ========================================== */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-light: var(--text-light);
+  --font-sans: var(--font-dm-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ==========================================
+   Base Styles
+   ========================================== */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth color transitions for theme switching */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.15s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--secondary-light);
+  color: var(--text);
 }

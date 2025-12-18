@@ -1,0 +1,176 @@
+'use client';
+
+import { useState } from 'react';
+import { Send, CheckCircle } from 'lucide-react';
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
+}
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // TODO: Connect to email service (Formspree, etc.)
+    // For now, just log to console and show success
+    console.log('Form submission:', formData);
+    
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-primary/5 border border-primary/20 rounded-xl p-8 text-center">
+        <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+        <h3 className="text-xl font-bold text-text mb-2">Thank You!</h3>
+        <p className="text-text-light">
+          We&apos;ve received your message and will get back to you within 24 hours.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Name */}
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium text-text mb-1.5">
+          Name <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+          placeholder="Your name"
+        />
+      </div>
+
+      {/* Email */}
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium text-text mb-1.5">
+          Email <span className="text-red-500">*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+          placeholder="your@email.com"
+        />
+      </div>
+
+      {/* Phone */}
+      <div>
+        <label htmlFor="phone" className="block text-sm font-medium text-text mb-1.5">
+          Phone
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+          placeholder="(727) 555-0123"
+        />
+      </div>
+
+      {/* Service Type */}
+      <div>
+        <label htmlFor="service" className="block text-sm font-medium text-text mb-1.5">
+          Service Needed
+        </label>
+        <select
+          id="service"
+          name="service"
+          value={formData.service}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors bg-white"
+        >
+          <option value="">Select a service...</option>
+          <option value="residential">Residential Window Cleaning</option>
+          <option value="commercial">Commercial Window Cleaning</option>
+          <option value="both">Both Residential & Commercial</option>
+          <option value="other">Other / Not Sure</option>
+        </select>
+      </div>
+
+      {/* Message */}
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-text mb-1.5">
+          Message <span className="text-red-500">*</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows={4}
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors resize-none"
+          placeholder="Tell us about your project..."
+        />
+      </div>
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover disabled:bg-accent/50 text-white px-6 py-3.5 rounded-lg font-semibold transition-colors"
+      >
+        {isSubmitting ? (
+          <>
+            <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            Sending...
+          </>
+        ) : (
+          <>
+            <Send className="w-5 h-5" />
+            Send Message
+          </>
+        )}
+      </button>
+
+      <p className="text-xs text-text-light text-center">
+        We typically respond within 24 hours during business days.
+      </p>
+    </form>
+  );
+}
+
+
