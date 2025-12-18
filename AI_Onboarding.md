@@ -162,6 +162,29 @@ Target keywords:
 
 ## Deployment Log
 
+### December 18, 2025 - Sticky CTA, Before/After, Scroll-to-Top UX
+- Added **sticky mobile CTA** - floating "Call for Free Quote" button on mobile (appears after 300px scroll)
+- Added **Before/After sections** across all 4 layouts:
+  - Layout 1: Interactive drag slider
+  - Layout 2: Side-by-side comparison
+  - Layout 3: Cards grid gallery
+  - Layout 4: Interactive drag slider
+- **Scroll-to-top** on layout/color switch for better UX
+- Total combinations: **24** (4 layouts × 6 color palettes)
+
+### December 18, 2025 - 4 Homepage Layouts + Value Template
+- Added **Layout 4: Value & Emotion** - comprehensive conversion-focused template
+  - What We Do (4 service cards)
+  - How We Do It (4-step process)
+  - Why It Matters (problems with $ costs)
+  - Beyond Clean (emotional benefits)
+  - Testimonials section
+  - Pricing packages (Starter $149, Essential $249, Premium $399)
+- **Layout 1**: Original (DM Sans font)
+- **Layout 2**: Clean & Simple (Inter font) - minimalist homeowner focus
+- **Layout 3**: Bold & Dynamic (Syne font) - animated, 2025 design principles
+- All layouts share same theme/color switcher
+
 ### December 18, 2025 - Theme Switcher with 6 Color Palettes
 - Added client-facing theme preview system
 - 6 distinct color palettes for customer selection:
