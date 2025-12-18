@@ -162,6 +162,12 @@ Target keywords:
 
 ## Deployment Log
 
+### December 18, 2025 - Layout 3 Mobile Hero Fix
+- Fixed text overflow on Layout 3 (Bold & Dynamic) mobile hero
+- Reduced text sizes: `text-xl` for TRANSFORMED on mobile (was too wide)
+- Added `tracking-tighter` for tighter letter spacing on mobile
+- All hero text now fits within mobile viewport without cutoff
+
 ### December 18, 2025 - Sticky CTA, Before/After, Scroll-to-Top UX
 - Added **sticky mobile CTA** - floating "Call for Free Quote" button on mobile (appears after 300px scroll)
 - Added **Before/After sections** across all 4 layouts:
