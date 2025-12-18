@@ -3,6 +3,7 @@
 import { Phone, CheckCircle, Shield, Clock, Star, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import BeforeAfter from './BeforeAfter';
+import FAQ from './FAQ';
 
 // TODO: Replace with actual phone number
 const PHONE_NUMBER = '(727) 555-0123';
@@ -188,6 +189,9 @@ export default function HomeClean() {
 
       {/* Before/After - Side by Side */}
       <BeforeAfter variant="sideBySide" />
+
+      {/* FAQ Section - Compact */}
+      <FAQ variant="compact" />
 
       {/* Service Area - Simple List */}
       <section className="py-12 border-t border-gray-200">

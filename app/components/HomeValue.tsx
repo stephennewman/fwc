@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import BeforeAfter from './BeforeAfter';
+import FAQ from './FAQ';
 
 // TODO: Replace with actual phone number
 const PHONE_NUMBER = '(727) 555-0123';
@@ -428,6 +429,9 @@ export default function HomeValue() {
 
       {/* Before/After - Interactive Slider */}
       <BeforeAfter variant="slider" />
+
+      {/* FAQ Section */}
+      <FAQ variant="default" />
 
       {/* Testimonials */}
       <section className="py-16 sm:py-20" style={{ backgroundColor: 'var(--surface)' }}>

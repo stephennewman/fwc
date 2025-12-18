@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ServiceCard from './ServiceCard';
 import CTAButton from './CTAButton';
 import BeforeAfter from './BeforeAfter';
+import FAQ from './FAQ';
 
 // TODO: Replace with actual phone number
 const PHONE_NUMBER = '(727) 555-0123';
@@ -147,6 +148,9 @@ export default function HomeDefault() {
 
       {/* Before/After - Interactive Slider */}
       <BeforeAfter variant="slider" />
+
+      {/* FAQ Section */}
+      <FAQ variant="default" />
 
       {/* Service Area */}
       <section className="py-16 sm:py-20 bg-white">

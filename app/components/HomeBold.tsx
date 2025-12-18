@@ -4,6 +4,7 @@ import { Phone, ArrowRight, Sparkles, Zap, Shield, Star, ChevronDown } from 'luc
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import BeforeAfter from './BeforeAfter';
+import FAQ from './FAQ';
 
 // TODO: Replace with actual phone number
 const PHONE_NUMBER = '(727) 555-0123';
@@ -228,6 +229,9 @@ export default function HomeBold() {
 
       {/* Before/After - Cards Grid */}
       <BeforeAfter variant="cards" />
+
+      {/* FAQ Section - Cards */}
+      <FAQ variant="cards" />
 
       {/* Service Area - Bold Display */}
       <section className="py-20 sm:py-32 bg-gray-900 text-white overflow-hidden">
