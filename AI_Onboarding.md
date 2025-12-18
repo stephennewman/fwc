@@ -162,6 +162,19 @@ Target keywords:
 
 ## Deployment Log
 
+### December 18, 2025 - Theme Switcher with 6 Color Palettes
+- Added client-facing theme preview system
+- 6 distinct color palettes for customer selection:
+  1. **Irish Green & Gold** - Original brand colors
+  2. **Ocean Blue & Coral** - Florida waters feel
+  3. **Coastal Teal & Pink** - Beachy, Miami vibes
+  4. **Slate & Electric Blue** - Modern, corporate
+  5. **Burgundy & Orange** - Warm sunset Florida
+  6. **Chicago Bears** 🐻 - Navy & orange
+- Theme switcher in footer for live preview
+- CSS variables for dynamic theming
+- Theme selection persists via localStorage
+
 ### December 18, 2025 - Initial Build
 - Created complete 4-page website structure
 - Implemented mobile-first responsive design
