@@ -83,28 +83,28 @@ export default function HomeBold() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-sm sm:max-w-none mx-auto">
               <a
                 href={PHONE_HREF}
-                className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-2xl transition-all hover:scale-105"
+                className="group flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-4 sm:py-5 text-sm sm:text-lg font-bold rounded-2xl transition-all hover:scale-105 w-full sm:w-auto"
                 style={{ backgroundColor: 'var(--accent)', color: 'white' }}
               >
-                <Phone className="w-5 h-5" />
-                GET FREE QUOTE
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <span>GET FREE QUOTE</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </a>
               <Link
                 href="/services"
-                className="glass inline-flex items-center justify-center px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg font-bold text-white rounded-2xl transition-all hover:bg-white/20"
+                className="glass flex items-center justify-center px-5 sm:px-8 py-4 sm:py-5 text-sm sm:text-lg font-bold text-white rounded-2xl transition-all hover:bg-white/20 w-full sm:w-auto"
               >
                 SEE SERVICES
               </Link>
             </div>
 
             {/* Phone Display */}
-            <div className="glass-dark inline-flex items-center gap-3 rounded-2xl px-6 py-4">
-              <Phone className="w-6 h-6 text-white/60" />
-              <span className="text-2xl sm:text-3xl font-bold text-white">{PHONE_NUMBER}</span>
+            <div className="glass-dark inline-flex items-center gap-2 sm:gap-3 rounded-2xl px-4 sm:px-6 py-3 sm:py-4">
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white/60 flex-shrink-0" />
+              <span className="text-xl sm:text-3xl font-bold text-white">{PHONE_NUMBER}</span>
             </div>
           </div>
 
