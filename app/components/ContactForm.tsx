@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -10,6 +10,9 @@ interface FormData {
   service: string;
   message: string;
 }
+
+// Web3Forms access key - get yours free at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -21,6 +24,7 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -34,16 +38,40 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // TODO: Connect to email service (Formspree, etc.)
-    // For now, just log to console and show success
-    console.log('Form submission:', formData);
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Quote Request from ${formData.name}`,
+          from_name: "Fahey's Window Cleaning Website",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          service: formData.service || 'Not specified',
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError('Something went wrong. Please call us directly at (727) 278-7045');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -60,6 +88,16 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Error Message */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
+          <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="text-red-700 font-medium">Unable to send message</p>
+            <p className="text-red-600 text-sm">{error}</p>
+          </div>
+        </div>
+      )}
       {/* Name */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-text mb-1.5">
