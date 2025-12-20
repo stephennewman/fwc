@@ -7,7 +7,7 @@ import BeforeAfter from './BeforeAfter';
 import FAQ from './FAQ';
 
 const PHONE_NUMBER = '(727) 278-7045';
-const PHONE_HREF = 'tel:+17272787045';
+const PHONE_HREF = 'tel:+1-727-278-7045';
 
 const words = ['CRYSTAL', 'SPOTLESS', 'PRISTINE', 'BRILLIANT'];
 

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const PHONE_NUMBER = '(727) 278-7045';
-const PHONE_HREF = 'tel:+17272787045';
+const PHONE_HREF = 'tel:+1-727-278-7045';
 const EMAIL = 'faheyswc@gmail.com';
 
 const serviceAreas = [

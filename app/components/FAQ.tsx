@@ -176,7 +176,7 @@ export default function FAQ({ variant = 'default' }: FAQProps) {
         <div className="text-center mt-10">
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <a
-            href="tel:+17272787045"
+            href="tel:+1-727-278-7045"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-colors"
             style={{ backgroundColor: 'var(--primary)' }}
           >

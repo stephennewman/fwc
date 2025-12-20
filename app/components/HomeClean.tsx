@@ -7,7 +7,7 @@ import FAQ from './FAQ';
 
 // TODO: Replace with actual phone number
 const PHONE_NUMBER = '(727) 278-7045';
-const PHONE_HREF = 'tel:+17272787045';
+const PHONE_HREF = 'tel:+1-727-278-7045';
 
 const services = [
   'Interior & Exterior Windows',

@@ -3,7 +3,7 @@
 import { Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const PHONE_HREF = 'tel:+17272787045';
+const PHONE_HREF = 'tel:+1-727-278-7045';
 
 export default function StickyMobileCTA() {
   const [isVisible, setIsVisible] = useState(false);
