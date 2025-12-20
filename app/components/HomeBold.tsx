@@ -226,8 +226,8 @@ export default function HomeBold() {
         </div>
       </section>
 
-      {/* Before/After - Cards Grid */}
-      <BeforeAfter variant="cards" />
+      {/* Before/After - Interactive Slider */}
+      <BeforeAfter variant="slider" />
 
       {/* FAQ Section - Cards */}
       <FAQ variant="cards" />

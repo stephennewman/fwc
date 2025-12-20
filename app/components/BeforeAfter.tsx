@@ -148,8 +148,8 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
     );
   }
 
-  // Default: Interactive slider using the exterior photos
-  const set = beforeAfterSets[1]; // Exterior set for slider
+  // Default: Interactive slider using the close-up photos
+  const set = beforeAfterSets[0]; // Close-up set works better for slider
   return (
     <section className="py-16 sm:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
