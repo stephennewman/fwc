@@ -148,12 +148,14 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
     );
   }
 
-  // Default: Interactive slider using the close-up photos
-  const set = beforeAfterSets[0]; // Close-up set works better for slider
+  // Default: Interactive slider with tabs to switch between photo sets
+  const [activeSet, setActiveSet] = useState(0);
+  const set = beforeAfterSets[activeSet];
+  
   return (
     <section className="py-16 sm:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <p className="text-sm font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--primary)' }}>
             See the Difference
           </p>
@@ -163,6 +165,27 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
             Slide to see the dramatic transformation professional window cleaning makes.
           </p>
+        </div>
+
+        {/* Tabs to switch between photo sets */}
+        <div className="flex justify-center gap-2 mb-6">
+          {beforeAfterSets.map((s, index) => (
+            <button
+              key={s.id}
+              onClick={() => {
+                setActiveSet(index);
+                setSliderPosition(50); // Reset slider when switching
+              }}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                activeSet === index
+                  ? 'text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+              style={activeSet === index ? { backgroundColor: 'var(--primary)' } : {}}
+            >
+              {s.title}
+            </button>
+          ))}
         </div>
 
         {/* Interactive Slider */}
@@ -224,7 +247,11 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
           </div>
         </div>
 
-        <p className="text-center text-gray-500 text-sm mt-6">
+        {/* Description */}
+        <p className="text-center text-gray-600 mt-4 font-medium">
+          {set.description}
+        </p>
+        <p className="text-center text-gray-500 text-sm mt-2">
           Windows stay clean for 6-8 months with our professional technique
         </p>
       </div>
