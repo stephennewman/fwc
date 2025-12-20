@@ -223,7 +223,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="irish-green" suppressHydrationWarning>
+    <html lang="en" data-theme="irish-green" data-layout="bold" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
