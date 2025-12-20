@@ -54,7 +54,7 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
                   src={set.before}
                   alt="Window before cleaning - dirty with water spots"
                   fill
-                  className="object-cover"
+                  className="object-cover brightness-[0.85] contrast-[0.9] saturate-[0.8] sepia-[0.15]"
                 />
               </div>
               <div className="absolute top-4 left-4 px-3 py-1 bg-gray-800 text-white text-sm font-medium rounded-full">
@@ -111,7 +111,7 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
                       src={set.before}
                       alt={`${set.title} before cleaning`}
                       fill
-                      className="object-cover"
+                      className="object-cover brightness-[0.85] contrast-[0.9] saturate-[0.8] sepia-[0.15]"
                     />
                     <div className="absolute top-2 left-2 px-2 py-0.5 bg-gray-800/80 text-white text-xs font-medium rounded">
                       Before
@@ -167,12 +167,12 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
 
         {/* Interactive Slider */}
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl cursor-ew-resize select-none">
-          {/* Before Image (full) */}
+          {/* Before Image (full) - slightly darkened/hazier */}
           <Image
             src={set.before}
             alt="Windows before cleaning"
             fill
-            className="object-cover"
+            className="object-cover brightness-[0.85] contrast-[0.9] saturate-[0.8] sepia-[0.15]"
             priority
           />
 
