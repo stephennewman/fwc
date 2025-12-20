@@ -8,8 +8,8 @@ import BeforeAfter from './BeforeAfter';
 import FAQ from './FAQ';
 
 // TODO: Replace with actual phone number
-const PHONE_NUMBER = '(727) 555-0123';
-const PHONE_HREF = 'tel:+17275550123';
+const PHONE_NUMBER = '(727) 278-7045';
+const PHONE_HREF = 'tel:+17272787045';
 
 const serviceAreas = [
   'Palm Harbor', 'Tarpon Springs', 'Dunedin', 'Clearwater',

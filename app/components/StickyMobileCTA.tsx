@@ -3,8 +3,7 @@
 import { Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-// TODO: Replace with actual phone number
-const PHONE_HREF = 'tel:+17275550123';
+const PHONE_HREF = 'tel:+17272787045';
 
 export default function StickyMobileCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,4 +44,5 @@ export default function StickyMobileCTA() {
     </div>
   );
 }
+
 

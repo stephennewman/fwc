@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
 
-// TODO: Replace with actual phone number
-const PHONE_HREF = 'tel:+17275550123';
+const PHONE_HREF = 'tel:+17272787045';
 
 type CTAVariant = 'primary' | 'secondary' | 'outline';
 

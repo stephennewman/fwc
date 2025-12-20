@@ -11,10 +11,9 @@ export const metadata: Metadata = {
   },
 };
 
-// TODO: Replace with actual contact info
-const PHONE_NUMBER = '(727) 555-0123';
-const PHONE_HREF = 'tel:+17275550123';
-const EMAIL = 'info@faheywindowcleaning.com';
+const PHONE_NUMBER = '(727) 278-7045';
+const PHONE_HREF = 'tel:+17272787045';
+const EMAIL = 'faheyswc@gmail.com';
 
 const contactInfo = [
   {
@@ -36,7 +35,7 @@ const contactInfo = [
     label: 'Location',
     value: 'Palm Harbor, FL 34683',
     href: null,
-    description: 'Serving Pinellas County',
+    description: 'Serving Pinellas County & Sarasota',
   },
   {
     icon: Clock,
@@ -56,6 +55,7 @@ const serviceAreas = [
   'Oldsmar',
   'East Lake',
   'Trinity',
+  'Sarasota',
 ];
 
 export default function ContactPage() {

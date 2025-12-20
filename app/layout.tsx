@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     'Tarpon Springs window cleaning',
     'Clearwater window cleaning',
     'Dunedin window cleaning',
+    'Sarasota window cleaning',
+    'French door cleaning',
+    'sliding glass door cleaning',
   ],
   authors: [{ name: "Fahey's Window Cleaning" }],
   creator: "Fahey's Window Cleaning",
@@ -100,12 +103,10 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://faheywindowcleaning.com",
   "name": "Fahey's Window Cleaning",
-  "description": "Professional window cleaning services for residential homes and commercial buildings in Palm Harbor, FL and surrounding Pinellas County areas.",
-  // TODO: Replace with actual logo URL
+  "description": "Professional window cleaning services for residential homes and commercial buildings in Palm Harbor, FL and surrounding areas. Windows stay clean 6-8 months with our professional technique.",
   "image": "https://faheywindowcleaning.com/logo.png",
-  // TODO: Replace with actual phone number
-  "telephone": "+1-727-555-0123",
-  "email": "info@faheywindowcleaning.com",
+  "telephone": "+1-727-278-7045",
+  "email": "faheyswc@gmail.com",
   "url": "https://faheywindowcleaning.com",
   "address": {
     "@type": "PostalAddress",
@@ -131,7 +132,8 @@ const localBusinessSchema = {
     { "@type": "City", "name": "Safety Harbor" },
     { "@type": "City", "name": "Oldsmar" },
     { "@type": "City", "name": "East Lake" },
-    { "@type": "City", "name": "Trinity" }
+    { "@type": "City", "name": "Trinity" },
+    { "@type": "City", "name": "Sarasota" }
   ],
   "openingHoursSpecification": [
     {
@@ -152,7 +154,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Residential Window Cleaning",
-          "description": "Professional window cleaning for homes and residential properties"
+          "description": "Professional window cleaning for homes and residential properties including French doors and sliding glass doors"
         }
       },
       {
@@ -162,9 +164,57 @@ const localBusinessSchema = {
           "name": "Commercial Window Cleaning",
           "description": "Professional window cleaning for businesses and commercial buildings"
         }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "French Door Cleaning",
+          "description": "Professional cleaning for French doors and glass panels"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sliding Glass Door Cleaning",
+          "description": "Professional cleaning for sliding glass doors"
+        }
       }
     ]
   }
+};
+
+// FAQ Schema for rich snippets
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long do windows stay clean after professional cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With our professional cleaning technique, your windows stay clean for 6-8 months! Our thorough process removes buildup and prevents rapid re-soiling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you clean French doors and sliding glass doors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We clean all types of glass doors including French doors and sliding glass doors. These are included in our window cleaning service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We carry full liability insurance and workers' compensation coverage. This protects you and your property."
+      }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -178,6 +228,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className={`${dmSans.variable} ${inter.variable} ${syne.variable} ${spaceGrotesk.variable} antialiased`}>

@@ -5,8 +5,8 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
-    question: "How much does window cleaning cost?",
-    answer: "Pricing depends on the number of windows, their size, and accessibility. Most residential homes range from $149-$399. We provide free, no-obligation quotes—just give us a call and we'll give you an honest price upfront with no hidden fees."
+    question: "How long do windows stay clean after professional cleaning?",
+    answer: "With our professional cleaning technique, your windows stay clean for 6-8 months! Our thorough process removes buildup and prevents rapid re-soiling, so you enjoy crystal clear views much longer than with DIY cleaning."
   },
   {
     question: "Do I need to be home during the cleaning?",
@@ -25,12 +25,12 @@ const faqs = [
     answer: "Absolutely. We carry full liability insurance and workers' compensation coverage. This protects you and your property. We're happy to provide proof of insurance upon request."
   },
   {
-    question: "How often should I have my windows cleaned?",
-    answer: "For most Florida homes, we recommend every 3-6 months. Our humid climate, pollen, and salt air (if you're near the coast) can build up quickly. Many customers schedule quarterly cleanings to keep their home looking its best year-round."
+    question: "What types of doors do you clean?",
+    answer: "We clean all types of glass doors including French doors and sliding glass doors. These are included in our window cleaning service—no extra charge for door glass!"
   },
   {
     question: "Do you clean screens and tracks too?",
-    answer: "Yes! Screen cleaning and track cleaning are included in all our packages. We remove screens, clean them, vacuum out tracks, and wipe down sills. It's a complete window cleaning service, not just the glass."
+    answer: "Yes! Screen cleaning and track cleaning are included in all our packages. We clean screens, vacuum out tracks, and wipe down sills. It's a complete window cleaning service, not just the glass. Note: we don't reinstall screens that need repair."
   },
   {
     question: "Can you remove hard water stains?",
@@ -176,15 +176,16 @@ export default function FAQ({ variant = 'default' }: FAQProps) {
         <div className="text-center mt-10">
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <a
-            href="tel:+17275550123"
+            href="tel:+17272787045"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-colors"
             style={{ backgroundColor: 'var(--primary)' }}
           >
-            Call Us: (727) 555-0123
+            Call Us: (727) 278-7045
           </a>
         </div>
       </div>
     </section>
   );
 }
+
 

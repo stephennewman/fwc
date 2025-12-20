@@ -6,9 +6,8 @@ import { useState, useEffect } from 'react';
 import BeforeAfter from './BeforeAfter';
 import FAQ from './FAQ';
 
-// TODO: Replace with actual phone number
-const PHONE_NUMBER = '(727) 555-0123';
-const PHONE_HREF = 'tel:+17275550123';
+const PHONE_NUMBER = '(727) 278-7045';
+const PHONE_HREF = 'tel:+17272787045';
 
 const words = ['CRYSTAL', 'SPOTLESS', 'PRISTINE', 'BRILLIANT'];
 
@@ -79,7 +78,7 @@ export default function HomeBold() {
 
             <p className="text-lg sm:text-xl text-white/70 mb-8 sm:mb-10 max-w-xl mx-auto font-light px-2">
               Professional window cleaning that makes your home shine. 
-              Bold results. Honest prices.
+              Windows stay clean 6-8 months with our technique.
             </p>
 
             {/* CTAs */}
@@ -144,7 +143,7 @@ export default function HomeBold() {
                 </h3>
                 <p className="text-white/70 text-lg mb-8 max-w-md">
                   Interior & exterior cleaning for homes of all sizes. 
-                  Screens, tracks, and hard water stains included.
+                  French doors, sliding glass doors, screens & tracks included.
                 </p>
                 <Link
                   href="/services#residential"
@@ -202,7 +201,7 @@ export default function HomeBold() {
             </div>
             <div className="space-y-6">
               {[
-                { icon: Zap, title: 'Fast Response', desc: 'Same-week service available' },
+                { icon: Zap, title: 'Long-Lasting Clean', desc: 'Windows stay clean 6-8 months' },
                 { icon: Shield, title: 'Fully Insured', desc: 'Your property is protected' },
                 { icon: Star, title: 'Premium Quality', desc: 'Streak-free, guaranteed' },
               ].map((item) => (
@@ -250,7 +249,7 @@ export default function HomeBold() {
             <div className="flex gap-8 animate-scroll whitespace-nowrap">
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="flex gap-8">
-                  {['PALM HARBOR', 'CLEARWATER', 'DUNEDIN', 'TARPON SPRINGS', 'SAFETY HARBOR', 'OLDSMAR', 'TRINITY', 'EAST LAKE'].map((area) => (
+                  {['PALM HARBOR', 'CLEARWATER', 'DUNEDIN', 'TARPON SPRINGS', 'SAFETY HARBOR', 'OLDSMAR', 'TRINITY', 'EAST LAKE', 'SARASOTA'].map((area) => (
                     <span 
                       key={`${i}-${area}`}
                       className="text-4xl sm:text-5xl font-extrabold text-white/10 hover:text-white/30 transition-colors cursor-default"

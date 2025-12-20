@@ -206,3 +206,4 @@ export default function BeforeAfter({ variant = 'slider' }: BeforeAfterProps) {
   );
 }
 
+

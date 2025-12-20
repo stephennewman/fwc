@@ -43,8 +43,8 @@ const serviceAreas = [
   { name: 'Oldsmar', primary: false },
   { name: 'East Lake', primary: false },
   { name: 'Trinity', primary: false },
+  { name: 'Sarasota', primary: false },
   { name: 'Crystal Beach', primary: false },
-  { name: 'Ozona', primary: false },
 ];
 
 export default function AboutPage() {

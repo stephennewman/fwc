@@ -4,9 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 
-// TODO: Replace with actual phone number
-const PHONE_NUMBER = '(727) 555-0123';
-const PHONE_HREF = 'tel:+17275550123';
+const PHONE_NUMBER = '(727) 278-7045';
+const PHONE_HREF = 'tel:+17272787045';
 
 const navLinks = [
   { href: '/', label: 'Home' },

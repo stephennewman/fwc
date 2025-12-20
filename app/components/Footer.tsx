@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import ThemeSwitcher from './ThemeSwitcher';
 
-// TODO: Replace with actual contact info
-const PHONE_NUMBER = '(727) 555-0123';
-const PHONE_HREF = 'tel:+17275550123';
-const EMAIL = 'info@faheywindowcleaning.com';
+const PHONE_NUMBER = '(727) 278-7045';
+const PHONE_HREF = 'tel:+17272787045';
+const EMAIL = 'faheyswc@gmail.com';
 
 const serviceAreas = [
   'Palm Harbor',
@@ -16,6 +14,7 @@ const serviceAreas = [
   'Oldsmar',
   'East Lake',
   'Trinity',
+  'Sarasota',
 ];
 
 const quickLinks = [
@@ -112,9 +111,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        {/* Theme Switcher - For Client Preview */}
-        <ThemeSwitcher />
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">

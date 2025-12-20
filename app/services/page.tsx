@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 const residentialFeatures = [
   'Complete interior and exterior window cleaning',
-  'Screen cleaning and reinstallation',
+  'Screen cleaning included',
   'Window track and sill cleaning',
   'Hard water stain removal',
-  'French doors and skylights',
+  'French doors and sliding glass doors',
   'Storm window cleaning',
   'Single and multi-story homes',
-  'Flexible scheduling to fit your needs',
+  'Windows stay clean 6-8 months',
 ];
 
 const commercialFeatures = [
