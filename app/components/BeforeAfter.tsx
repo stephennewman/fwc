@@ -12,8 +12,8 @@ interface BeforeAfterProps {
 const beforeAfterSets = [
   {
     id: 1,
-    before: '/images/before-after/befroe copy.png',
-    after: '/images/before-after/afterk copy.png',
+    before: '/images/before-after/befroe_copy.png',
+    after: '/images/before-after/afterk_copy.png',
     title: 'Window with Shutters',
     description: 'Hard water stains removed',
   },
