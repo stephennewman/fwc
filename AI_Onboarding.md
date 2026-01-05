@@ -162,6 +162,19 @@ Target keywords:
 
 ## Deployment Log
 
+### January 5, 2026 - Real Logos & Favicon
+- Added **real logo** to header (full logo on desktop, shamrock icon on mobile)
+- Added **shamrock icon** to footer
+- Added **favicon** using shamrock icon (`app/icon.png`)
+- Added **Apple touch icon** for iOS home screen (`app/apple-icon.png`)
+- Logo files: `faheyswc_logo.png` (full), `faheywc_icon.png` (icon)
+
+### January 5, 2026 - QR Code & Google Search Console
+- Created `/qr` redirect page (hidden from Google) for print materials
+- Generated QR code image at `/images/qr-code.png`
+- Fixed domain URLs throughout (changed from faheywindowcleaning.com to faheyswc.com)
+- Updated sitemap.xml, robots.txt, and JSON-LD schema with correct domain
+
 ### January 5, 2026 - Contact Form Email Integration (Resend)
 - Integrated **Resend** email service for contact form
 - **Two emails sent on form submission:**
