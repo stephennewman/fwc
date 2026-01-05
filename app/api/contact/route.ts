@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email addresses
 const BUSINESS_EMAIL = 'faheyswc@gmail.com';
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'; // Use verified domain once set up
+const FROM_EMAIL = 'Fahey\'s Window Cleaning <noreply@faheyswc.com>';
 
 interface ContactFormData {
   name: string;
