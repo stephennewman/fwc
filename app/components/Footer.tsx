@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const PHONE_NUMBER = '(727) 278-7045';
@@ -33,11 +34,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
-            {/* TODO: Replace with white logo */}
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-lg">F</span>
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/faheywc_icon.png"
+                alt="Fahey's Window Cleaning"
+                width={48}
+                height={48}
+                className="rounded-lg"
+              />
               <div>
                 <span className="font-bold text-lg">Fahey&apos;s</span>
                 <span className="text-white/80 text-sm block -mt-1">Window Cleaning</span>

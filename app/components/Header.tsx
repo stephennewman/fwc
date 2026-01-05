@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, Phone } from 'lucide-react';
 
 const PHONE_NUMBER = '(727) 278-7045';
@@ -21,16 +22,24 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            {/* TODO: Replace with actual logo image */}
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">F</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-bold text-primary text-lg">Fahey&apos;s</span>
-              <span className="text-text-light text-sm block -mt-1">Window Cleaning</span>
-            </div>
+          {/* Logo - Icon on mobile, full logo on desktop */}
+          <Link href="/" className="flex items-center">
+            {/* Mobile: Icon only */}
+            <Image
+              src="/faheywc_icon.png"
+              alt="Fahey's Window Cleaning"
+              width={44}
+              height={44}
+              className="sm:hidden"
+            />
+            {/* Desktop: Full logo */}
+            <Image
+              src="/faheyswc_logo.png"
+              alt="Fahey's Window Cleaning"
+              width={220}
+              height={60}
+              className="hidden sm:block h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
