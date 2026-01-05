@@ -34,7 +34,7 @@ export default function Header() {
             />
             {/* Desktop: Full logo */}
             <Image
-              src="/faheyswc_logo.png"
+              src="/faheyswc_logo_horizontal.png"
               alt="Fahey's Window Cleaning"
               width={220}
               height={60}
