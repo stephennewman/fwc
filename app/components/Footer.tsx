@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const PHONE_NUMBER = '(727) 278-7045';
@@ -34,18 +33,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/faheywc_icon.png"
-                alt="Fahey's Window Cleaning"
-                width={48}
-                height={48}
-                className="rounded-lg"
-              />
-              <div>
-                <span className="font-bold text-lg">Fahey&apos;s</span>
-                <span className="text-white/80 text-sm block -mt-1">Window Cleaning</span>
-              </div>
+            <div className="mb-4">
+              <span className="font-bold text-xl">Fahey&apos;s</span>
+              <span className="text-white/80 text-sm block">Window Cleaning</span>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
               Professional window cleaning services for homes and businesses in Palm Harbor, FL and surrounding areas. Locally owned and operated.
