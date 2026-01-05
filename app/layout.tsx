@@ -67,9 +67,9 @@ export const metadata: Metadata = {
     description: "Professional window cleaning services for homes and businesses in Palm Harbor and Pinellas County, FL.",
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/faheyswc_logo_horizontal.png',
         width: 1200,
-        height: 630,
+        height: 400,
         alt: "Fahey's Window Cleaning - Palm Harbor, FL",
       },
     ],
