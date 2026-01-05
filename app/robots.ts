@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next';
 
-// TODO: Update with actual domain when available
-const BASE_URL = 'https://faheywindowcleaning.com';
+const BASE_URL = 'https://faheyswc.com';
 
 export default function robots(): MetadataRoute.Robots {
   return {

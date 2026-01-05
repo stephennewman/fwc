@@ -33,9 +33,8 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
-// TODO: Update metadataBase with actual domain when available
 export const metadata: Metadata = {
-  metadataBase: new URL('https://faheywindowcleaning.com'),
+  metadataBase: new URL('https://faheyswc.com'),
   title: {
     default: "Fahey's Window Cleaning | Palm Harbor, FL | Residential & Commercial",
     template: "%s | Fahey's Window Cleaning",
@@ -62,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://faheywindowcleaning.com',
+    url: 'https://faheyswc.com',
     siteName: "Fahey's Window Cleaning",
     title: "Fahey's Window Cleaning | Palm Harbor, FL",
     description: "Professional window cleaning services for homes and businesses in Palm Harbor and Pinellas County, FL.",
@@ -101,13 +100,13 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://faheywindowcleaning.com",
+  "@id": "https://faheyswc.com",
   "name": "Fahey's Window Cleaning",
   "description": "Professional window cleaning services for residential homes and commercial buildings in Palm Harbor, FL and surrounding areas. Windows stay clean 6-8 months with our professional technique.",
-  "image": "https://faheywindowcleaning.com/logo.png",
+  "image": "https://faheyswc.com/logo.png",
   "telephone": "+1-727-278-7045",
   "email": "faheyswc@gmail.com",
-  "url": "https://faheywindowcleaning.com",
+  "url": "https://faheyswc.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Palm Harbor",
