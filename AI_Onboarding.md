@@ -162,6 +162,19 @@ Target keywords:
 
 ## Deployment Log
 
+### January 5, 2026 - Contact Form Email Integration (Resend)
+- Integrated **Resend** email service for contact form
+- **Two emails sent on form submission:**
+  1. Internal notification to `faheyswc@gmail.com` with full customer details
+  2. Confirmation email to customer thanking them for their inquiry
+- Created `/api/contact` API route for form processing
+- Removed Web3Forms dependency in favor of Resend
+- Emails include branded HTML templates with:
+  - Business green color scheme
+  - Quick action links (call/email)
+  - Mobile-friendly design
+- Added `RESEND_API_KEY` environment variable requirement
+
 ### December 18, 2025 - Layout 3 Mobile Hero Fix
 - Fixed text overflow on Layout 3 (Bold & Dynamic) mobile hero
 - Reduced text sizes: `text-xl` for TRANSFORMED on mobile (was too wide)
@@ -216,12 +229,31 @@ Target keywords:
 
 ---
 
+## Environment Variables
+
+The following environment variables must be set in Vercel (or `.env.local` for development):
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `RESEND_API_KEY` | Resend API key from https://resend.com/api-keys | Yes |
+| `RESEND_FROM_EMAIL` | Verified sender email (default: `onboarding@resend.dev` for testing) | Optional |
+
+### Resend Setup Instructions
+
+1. **Create account** at https://resend.com
+2. **Get API key** from https://resend.com/api-keys
+3. **Add to Vercel**: Project Settings → Environment Variables → Add `RESEND_API_KEY`
+4. **Verify domain** (optional but recommended): Add `faheyswc.com` to Resend for branded emails
+
+**Note:** Until domain is verified, emails will be sent from `onboarding@resend.dev` (test mode).
+
+---
+
 ## Known Limitations
 
-1. **Contact form is non-functional** - Needs email service integration
-2. **No real photos** - Using CSS gradient placeholders
-3. **No analytics** - Tracking ID not yet provided
-4. **No booking system** - Deferred for later implementation
+1. **No real photos** - Using CSS gradient placeholders
+2. **No analytics** - Tracking ID not yet provided
+3. **No booking system** - Deferred for later implementation
 
 ---
 

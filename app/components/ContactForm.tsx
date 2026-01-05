@@ -11,9 +11,6 @@ interface FormData {
   message: string;
 }
 
-// Web3Forms access key - get yours free at https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '';
-
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -41,20 +38,16 @@ export default function ContactForm() {
     setError(null);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `New Quote Request from ${formData.name}`,
-          from_name: "Fahey's Window Cleaning Website",
           name: formData.name,
           email: formData.email,
-          phone: formData.phone || 'Not provided',
-          service: formData.service || 'Not specified',
+          phone: formData.phone || undefined,
+          service: formData.service || undefined,
           message: formData.message,
         }),
       });
@@ -64,7 +57,7 @@ export default function ContactForm() {
       if (result.success) {
         setIsSubmitted(true);
       } else {
-        throw new Error(result.message || 'Failed to send message');
+        throw new Error(result.error || 'Failed to send message');
       }
     } catch (err) {
       console.error('Form submission error:', err);
