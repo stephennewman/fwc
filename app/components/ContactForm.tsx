@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import posthog from 'posthog-js';
 
 interface FormData {
   name: string;
@@ -56,6 +57,10 @@ export default function ContactForm() {
 
       if (result.success) {
         setIsSubmitted(true);
+        // Deliberately no name/email/phone here; only the service type.
+        posthog.capture('contact_form_submitted', {
+          service: formData.service || 'unspecified',
+        });
       } else {
         throw new Error(result.error || 'Failed to send message');
       }

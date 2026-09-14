@@ -121,7 +121,7 @@ fwc/
 
 ### Post-Launch
 
-- [ ] **Google Analytics:** Add tracking ID to layout
+- [x] **Analytics:** PostHog wired up; set `NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN` in Vercel to activate
 - [ ] **Google Search Console:** Add verification code
 - [ ] **Google Business Profile:** Set up and link
 - [ ] **Booking System:** Implement when ready (deferred)
@@ -250,6 +250,12 @@ The following environment variables must be set in Vercel (or `.env.local` for d
 |----------|-------------|----------|
 | `RESEND_API_KEY` | Resend API key from https://resend.com/api-keys | Yes |
 | `RESEND_FROM_EMAIL` | Verified sender email (default: `onboarding@resend.dev` for testing) | Optional |
+| `NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN` | PostHog project token (`phc_...`) from the dedicated Fahey's PostHog organization. Tracking is disabled when unset. | Yes (production) |
+| `NEXT_PUBLIC_POSTHOG_HOST` | PostHog ingestion host (default: `https://us.i.posthog.com`) | Optional |
+
+### PostHog Analytics
+
+Client-side tracking is initialized in `instrumentation-client.ts` (project root). It captures pageviews (including client-side navigations) and a custom `contact_form_submitted` event (service type only, no PII). Analytics lives in its own PostHog organization, separate from other projects; do not reuse another org's token.
 
 ### Resend Setup Instructions
 
@@ -265,7 +271,7 @@ The following environment variables must be set in Vercel (or `.env.local` for d
 ## Known Limitations
 
 1. **No real photos** - Using CSS gradient placeholders
-2. **No analytics** - Tracking ID not yet provided
+2. **Analytics inactive until token set** - PostHog code is in place but sends nothing until `NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN` is configured in Vercel
 3. **No booking system** - Deferred for later implementation
 
 ---
