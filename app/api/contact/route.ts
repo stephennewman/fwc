@@ -124,8 +124,8 @@ export async function POST(request: NextRequest) {
             
             <div style="margin-top: 30px; padding: 20px; background: #f9f9f9; border-radius: 8px; text-align: center;">
               <p style="margin: 0 0 10px 0; font-weight: bold;">Need to reach us sooner?</p>
-              <a href="tel:7272787045" style="display: inline-block; background: #1a5d1a; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">
-                📞 Call (727) 278-7045
+              <a href="tel:7273542500" style="display: inline-block; background: #1a5d1a; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                📞 Call (727) 354-2500
               </a>
             </div>
             

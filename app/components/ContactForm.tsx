@@ -61,7 +61,7 @@ export default function ContactForm() {
       }
     } catch (err) {
       console.error('Form submission error:', err);
-      setError('Something went wrong. Please call us directly at (727) 278-7045');
+      setError('Something went wrong. Please call us directly at (727) 354-2500');
     } finally {
       setIsSubmitting(false);
     }
@@ -137,7 +137,7 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
-          placeholder="(727) 278-7045"
+          placeholder="(727) 354-2500"
         />
       </div>
 

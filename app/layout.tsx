@@ -104,7 +104,7 @@ const localBusinessSchema = {
   "name": "Fahey's Window Cleaning",
   "description": "Professional window cleaning services for residential homes and commercial buildings in Palm Harbor, FL and surrounding areas. Windows stay clean 6-8 months with our professional technique.",
   "image": "https://faheyswc.com/logo.png",
-  "telephone": "+1-727-278-7045",
+  "telephone": "+1-727-354-2500",
   "email": "faheyswc@gmail.com",
   "url": "https://faheyswc.com",
   "address": {
